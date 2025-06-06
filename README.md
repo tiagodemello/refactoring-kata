@@ -18,7 +18,11 @@ O objetivo deste repositório é servir de base para exercícios de refatoraçã
 
 ### Exercício 1: Correção na Descrição da Nota Fiscal
 **Cenário:**
-Recentemente, a legislação de São Paulo mudou e agora, para notas fiscais com valor total acima de R$ 100.000, a descrição deve obrigatoriamente conter o texto "GRANDE CONTRIBUINTE". Além disso, para notas sem ICMS, a descrição deve informar explicitamente "SEM ICMS POR ISENÇÃO". Sua tarefa é implementar essas mudanças na lógica de descrição no método `adicionarNotaFiscal`, garantindo que as novas regras sejam atendidas sem quebrar os fluxos existentes.
+Recentemente, a legislação de São Paulo mudou e agora, para notas fiscais com valor total acima de R$ 100.000, 
+a descrição deve obrigatoriamente conter o texto "GRANDE CONTRIBUINTE". Além disso, para notas sem ICMS, 
+a descrição deve informar explicitamente "SEM ICMS POR ISENÇÃO". Sua tarefa é implementar essas mudanças 
+na lógica de descrição no método `adicionarNotaFiscal`, garantindo que as novas regras sejam atendidas 
+sem quebrar os fluxos existentes.
 
 **Desafio:**
 - Refatore a lógica de descrição para suportar as novas regras.
