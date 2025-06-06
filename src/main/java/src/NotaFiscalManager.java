@@ -349,9 +349,8 @@ public class NotaFiscalManager extends Action {
         }
 
         // Descrição dinâmica
-        String desc = "NF de "+uf+" - Cliente: "+nota.getNomeCliente()+" - ICMS: R$"+String.format("%.2f", nota.getValorICMS());
-        String uf = obterUFPeloCNPJ(nota.getCnpjCliente());
-        if (uf.equals("SP")) {
+        String desc = "NF de "+obterUFPeloCNPJ(nota.getCnpjCliente())+" - Cliente: "+nota.getNomeCliente()+" - ICMS: R$"+String.format("%.2f", nota.getValorICMS());
+        if (obterUFPeloCNPJ(nota.getCnpjCliente()).equals("SP")) {
             if (nota.getValorICMS() > 0) {
                 desc = "NF Paulista: "+nota.getNumero()+" - ICMS: R$"+String.format("%.2f", nota.getValorICMS());
             } else {
@@ -360,7 +359,7 @@ public class NotaFiscalManager extends Action {
         } else {
             if (nota.getValorICMS() > 0) {
             } else {
-                desc = "NF de "+uf+" SEM ICMS - Cliente: "+nota.getNomeCliente();
+                desc = "NF de "+obterUFPeloCNPJ(nota.getCnpjCliente())+" SEM ICMS - Cliente: "+nota.getNomeCliente();
             }
         }
         if (nota.getValorIPI() > 1000) {
